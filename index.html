@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人简历</title>
+<link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <div class="resume">
+    <div class="header">
+    <div class="basic">
+    <h1>iris</h1>
+    <h2>前端开发工程师</h2>
+    </div>
+    <div class="image">
+  <img src="images/OIP-C.jpg">
+    </div>
+    </div>
+    <div class="section">
+    <h3>个人信息</h3>
+    <div class="info-item">
+      <span class="iconfont">&#xee19;</span>
+    <p>xumenghan@qq.com</p>
+    </div>
+     <div class="info-item">
+      <span class="iconfont">&#xe60a;</span>
+    <p>19983773274</p>
+    </div>
+     <div class="info-item">
+      <span class="iconfont">&#xe619;</span>
+    <p>扬州技师学院</p>
+    </div>
+    </div>
+    
+    <div class="section"> 
+    <h3>学习经历</h3>
+    <p>2018-2021年 xxx初中</p>
+    <p>2021-至今  xxx技师学院</p>
+    </div>
+    
+      <div class="section">
+    <h3>教育背景</h3>
+    <p>2021-至今 -- 计算机网络技术</p>
+    <p>大专学历  主修：JavaScript,网页设计,web设计,UI设计等课程</p>
+    </div>
+    
+    <div class="section skills">
+    <h3>技能</h3>
+  <ul>
+  <li>HTHL</li>
+  <li>javascript</li>
+  <li>css</li>
+  <li>Hysql</li>
+  
+  </ul>
+    </div>
+     <div class="section">
+    <h3>视频展示</h3>
+    <div class="video">
+      <video id="resume-video" controls>
+        <source src="video/644180159.mp4" type="video/mp4">
+          </video>
+          <script>
+            var video=document.getElementById('resume-video');
+            video.style.width="90%";
+            video.style.padding="5px";
+            video.style.backgroundColor="rgb(236, 79, 106)";
+            document.addEventListener('keydown',(event)=>{
+
+              if (event.code==='Space'||event.keyCode===32){
+                event.preventDefault();
+                if(video.paused){
+                  video.play();
+                }else{
+                  video.pause();
+                }
+              }
+            })
+          </script>
+      </div>
+
+    </div>
+ <div class="section">
+    <h3>图片展示</h3>
+    <div id="slideshow"></div>
+    </div>
+<script>
+const slideshow=document.getElementById("slideshow");
+const images=["photo/000.jfif","photo/00.jfif","photo/11.jfif","photo/22.jfif"];
+let index=0;
+slideshow.style.width="100%";
+slideshow.style.height="500px";
+slideshow.style.backgroundSize="100%";
+
+function nextImage(){
+slideshow.style.backgroundImage='url('+images[index]+')';
+index=(index+1)%images.length;
+}
+nextImage();
+
+</script>
+
+</div>
+</body>
+</html>
